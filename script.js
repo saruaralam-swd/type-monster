@@ -22,7 +22,6 @@ fetch("./texts.json")
 // checks the user typed character and displays accordingly
 const typeController = (e) => {
   const newLetter = e.key;
-  console.log(newLetter);
 
   // Handle backspace press
   if (newLetter == "Backspace") {
@@ -74,6 +73,7 @@ const gameOver = () => {
   resultModal.innerHTML = "";
   resultModal.classList.toggle("hidden");
   modalBackground.classList.toggle("hidden");
+
   // clear user text
   display.innerHTML = "";
   // make it inactive
