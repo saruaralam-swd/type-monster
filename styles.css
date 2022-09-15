@@ -14,12 +14,19 @@ body {
 .title {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 70%;
   margin: 10px auto;
 }
 
 .title img {
   text-align: center;
+}
+
+.title a {
+  font-size: 22px;
+  color: #9dffad;
+  margin-left: auto;
 }
 
 .box-container {
