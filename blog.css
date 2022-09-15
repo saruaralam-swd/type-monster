@@ -91,3 +91,11 @@ details[open] summary .icon {
 .red {
   color: red;
 }
+
+.code img{
+  width: 50%;
+}
+
+.event-loop-animation img {
+  width: 100%;
+}
