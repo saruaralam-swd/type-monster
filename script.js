@@ -28,23 +28,23 @@ const typeController = (e) => {
     userText = userText.slice(0, userText.length - 1);
     return display.removeChild(display.lastChild);
   }
-
+  
   // these are the valid character we are allowing to type
-  const validLetters =
-    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890!@#$%^&*()_+-={}[]'\".,?";
+  const validLetters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890!@#$%^&*()_+-={}[]'\".,?";
 
   // if it is not a valid character like Control/Alt then skip displaying anything
   if (!validLetters.includes(newLetter)) {
     return;
   }
 
-  userText += newLetter;
-
+  // userText += newLetter;
+  userText = userText + newLetter;
   const newLetterCorrect = validate(newLetter);
 
   if (newLetterCorrect) {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
   } else {
+    errorCount++;
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
   }
 
@@ -55,6 +55,7 @@ const typeController = (e) => {
 };
 
 const validate = (key) => {
+  
   if (key === questionText[userText.length - 1]) {
     return true;
   }
@@ -76,13 +77,15 @@ const gameOver = () => {
 
   // clear user text
   display.innerHTML = "";
+  
   // make it inactive
   display.classList.add("inactive");
+  
   // show result
   resultModal.innerHTML += `
     <h1>Finished!</h1>
-    <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
-    <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
+    <p>You took: <span class="bold">${parseInt(timeTaken)}</span> seconds</p>
+    <p>You made <span class="bold red">${errorCount }</span> mistakes</p>
     <button onclick="closeModal()">Close</button>
   `;
 
@@ -102,8 +105,7 @@ const closeModal = () => {
 
 const start = () => {
   // If already started, do not start again
-  // if (startTime) return;
-  // console.log(startTime);
+  if (startTime) return;
 
   let count = 3;
   countdownOverlay.style.display = "flex";

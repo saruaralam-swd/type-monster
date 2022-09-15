@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link rel="stylesheet" href="./blog.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <details>
+          <summary> 
+            Difference between LocalStorage Vs SessionStorage
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor" >
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /> 
+            </svg>
+          </summary>
+          <div class="details-info">
+            <p>sessionStorage is similar to localStorage ; the difference is that<b> while data in localStorage doesn't expire, data in sessionStorage is cleared when the page session ends.</b> Whenever a document is loaded in a particular tab in the browser, a unique page session gets created and assigned to that particular tab</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>
+           Global Scope Vs Block Scope
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor" > 
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </summary>
+          <div class="details-info">
+            <div class="scope-container">
+              <div class="global-scope">
+                <ul><h3><b>Global Scope</b></h3>
+                  <li><b>1.</b> A variable declared at the top of a program or outside of a function is considered a global scope variable</li>
+                  <li><b>2.</b> Global Scope. Variables declared Globally (outside any function) have Global Scope. Global variables can be accessed from anywhere in a JavaScript program.</li>
+                </ul>
+              </div>
+              <div class="block-scope">
+                <ul><h3><b>Local Scope</b></h3>
+                  <li>Block scoped variables: A block scoped variable means that the variable defined within a block will not be accessible from outside the block. A block can reside inside a function, and a block scoped variable will not be available outside the block even if the block is inside a function.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            How to work Event-loop in Javascript
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor" > 
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </summary>
+          <div class="details-info">
+            <p>The Event Loop has one simple job — to monitor the Call Stack and the Callback Queue. If the Call Stack is empty, the Event Loop will take the first event from the queue and will push it to the Call Stack, which effectively runs it.</p>
+            <p>Such an iteration is called a tick in the Event Loop. Each event is just a function callback.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            How many we get Undefined
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor" > 
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </summary>
+          <div class="details-info">
+            Your Answer i here...
+          </div>
+        </details>
+      </div>
+    </main>
+  </body>
+</html>
